@@ -1,0 +1,42 @@
+import turtle
+
+# Draw a rectangle representing a building
+turtle.penup()
+turtle.goto(-150, -150)
+turtle.pendown()
+turtle.fillcolor("gray")
+turtle.begin_fill()
+for _ in range(2):
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(100)
+    turtle.left(90)
+turtle.end_fill()
+
+# Draw windows on the building
+for _ in range(2):
+    for _ in range(3):
+        x_pos = turtle.xcor() + 5
+        y_pos = turtle.ycor() + 5
+        turtle.penup()
+        turtle.goto(x_pos, y_pos)
+        turtle.pendown()
+        turtle.fillcolor("yellow")
+        turtle.begin_fill()
+        for _ in range(4):
+            turtle.forward(10)
+            turtle.left(90)
+        turtle.end_fill()
+
+    turtle.penup()
+    turtle.forward(70)
+
+# Draw stars in the night sky
+turtle.hideturtle()
+turtle.penup()
+turtle.goto(-300, 200)
+turtle.pendown()
+turtle.dot(5, "white")
+
+# Close the turtle graphics window on click
+turtle.exitonclick()
